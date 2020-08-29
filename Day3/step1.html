@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var hero = {
+            name : "Batman",
+            power : 6
+        };
+
+        function changeTitle(hero){
+            if(hero.power > 5){
+                let tempVal = hero.name+" is Strong";
+                hero.name = tempVal;
+            }
+            // console.log(tempVal);// Batman is strong;
+            return hero.name
+        };
+
+        document.addEventListener("DOMContentLoaded", function(){
+            document.body.innerHTML = "<h1>"+changeTitle(hero)+"</h1>";
+        })
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

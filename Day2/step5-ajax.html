@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 400px;
+            height: 200px;
+            margin: 20px auto;
+            background-color: lightgray;
+            border: 1px solid lightslategray;
+            overflow : auto;
+        }
+        button{
+            width: 400px;
+            display: block;
+            margin : 10px auto;
+        }
+    </style>
+    <script>
+        var xhr ; 
+        document.addEventListener("DOMContentLoaded", init);
+        function init(){
+            xhr = new XMLHttpRequest();
+            xhr.open("get", "/data", false);
+            document.querySelector("button").addEventListener("click", clickHandler);
+        };
+        function clickHandler(){
+                xhr.send();
+                document.querySelector(".box").innerHTML = xhr.responseText;
+        }
+    </script>
+</head>
+<body>
+    <h1>Hello Ajax</h1>
+    <hr>
+    <button>Get Data</button>
+    <div class="box"></div>
+</body>
+</html>

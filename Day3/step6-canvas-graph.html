@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border : 1px solid grey;
+        }
+    </style>
+    <script>
+        var ctx;
+        var xbox = -50;
+        document.addEventListener("DOMContentLoaded", init);
+        function init(){
+            ctx = document.querySelector("#can").getContext("2d");
+        };
+        setInterval(function(){
+            xbox++;
+            ctx.clearRect(0,0,500,500);
+            ctx.fillRect(xbox,0,50,50);
+            if(xbox > 500){
+                xbox = -50
+            }
+        }, 1)
+    </script>
+</head>
+<body>
+    <canvas id="can" width="500" height="500"></canvas>
+</body>
+</html>

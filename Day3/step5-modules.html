@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modules</title>
+    <script type="module">
+        import { Hero } from "./classes/Hero.js";
+
+        var hero1 = new Hero("Peter","Parker");
+        var hero2 = new Hero("Tony","Stark");
+        var hero3 = new Hero("Steve", "Rogers");
+
+        console.log(hero1.fullname());
+        console.log(hero2.fullname());
+        console.log(hero3.fullname());
+        console.log(hero1.fullname === hero2.fullname);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

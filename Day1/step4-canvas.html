@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+        canvas{
+            border : 2px solid red;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var ctx = document.getElementById("can").getContext("2d");
+                // ctx.font = "normal 30px impact";
+                // ctx.fillText("Hello There",0,50);
+
+                /*
+                ctx.moveTo(0, 0);
+                ctx.lineTo(100, 100);
+                ctx.moveTo(110, 110);
+                ctx.lineTo(150, 150);
+                ctx.moveTo(160, 160);
+                ctx.lineTo(200, 200);
+                ctx.stroke();
+               */
+
+                ctx.moveTo(50, 50);
+                ctx.lineTo(50, 250);
+                ctx.lineTo(250, 250);
+                ctx.lineTo(250, 50);
+                ctx.lineTo(50, 50);
+                ctx.fillStyle = "orange";
+                ctx.lineWidth = 5;
+                ctx.strokeStyle = "red";
+
+                ctx.stroke();
+                ctx.fill();
+        }
+    </script>
+</head>
+<body>
+    <canvas id="can" width="400" height="400"></canvas>
+</body>
+</html>

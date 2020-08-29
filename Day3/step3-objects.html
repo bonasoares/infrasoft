@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var obj1 = {};
+        var obj2 = new Object();
+        var obj3 = Object.create(null);
+            Object.defineProperty(obj3,"title",{ value : "Batman", writable : true });
+
+            console.log(obj3.title);// Batman
+            obj3.title = "Joker";
+            console.log(obj3.title);// Batman
+            
+            /*
+            Object.defineProperty("TargetObject", "PropertyName", {
+                value : "",
+                writable : false,
+                enumerable : false,
+                configurable : false,
+                get : function(){},
+                set : function(){}
+            })
+            */
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

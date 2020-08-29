@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(successFun, ErrorFun)
+            }else{
+                document.getElementById("log").innerHTML = "No Geolocation";
+            }
+        };
+        function successFun(pos){
+            document.getElementById("log").innerHTML = "Time Stamp : "+new Date(pos.timestamp)+"<br/>";
+
+            document.getElementById("log").innerHTML += "Longitude : "+pos.coords.longitude+"<br/>";
+            document.getElementById("log").innerHTML += "Latitude : "+pos.coords.longitude+"<br/>";
+            document.getElementById("log").innerHTML += "Altitude : "+pos.coords.altitude;
+        };
+        function ErrorFun(error){
+            document.getElementById("log").innerHTML = "Error : "+error.message;
+            console.log(error);
+        };
+    </script>
+</head>
+<body>
+    <h1 id="log"></h1>
+</body>
+</html>

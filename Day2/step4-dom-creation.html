@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 600px;
+            height: 400px;
+            margin: 10px auto;
+            border : 1px solid grey;
+            background-color: gainsboro;
+            overflow : auto;
+        }
+        .container div{
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            border : 1px solid grey;
+            background-color: gold;
+            float: left;
+            text-align: center;
+            font-size: 60px;
+            vertical-align: middle;
+            line-height: 100px;
+        }
+    </style>
+    <script>
+        var count = 0 ;
+        var container;
+        document.addEventListener("DOMContentLoaded", function(){
+            document.querySelectorAll("button")[0].addEventListener("click", addHandler);
+            document.querySelectorAll("button")[1].addEventListener("click", removeHandler);
+            container = document.querySelector(".container");
+            container.addEventListener("click", removeBoxHandler);
+        });
+        function addHandler(){
+            var box = document.createElement("div");
+                box.innerHTML = count++;
+                // box.addEventListener("click", removeBoxHandler );
+                container.appendChild(box);
+        }
+        function removeHandler(){
+            var box = container.firstChild;
+            container.removeChild(box);
+                      count--;
+        }
+        function removeBoxHandler(evt){
+            // document.querySelector(".container").removeChild(this);
+            if(evt.target.getAttribute("class") === 'container'){
+                alert("you did not click on box");
+            }else{
+                container.removeChild(evt.target);
+            }
+        };
+    </script>
+</head>
+<body>
+    <button>Add Box</button>
+    <button>Remove Box</button>
+    <hr>
+    <div class="container"></div>
+</body>
+</html>
+
+
+<!--
+    open command prompt
+    node -v
+    -------------------
+    http://nodejs.org
+    download the latest version
+-->

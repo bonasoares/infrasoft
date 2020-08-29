@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storages</title>
+    <script>
+        window.onload = function(){
+            sessionStorage.setItem("user", "Vijay");
+            sessionStorage.setItem("city", "Bangalore");
+            document.getElementById("btn").onclick = function(){
+                document.getElementById("log").innerHTML = sessionStorage.getItem("user");
+            }
+            document.getElementById("btn1").onclick = function(){
+                sessionStorage.setItem("user", "Changed Info");
+            }
+            document.getElementById("btn2").onclick = function(){
+                document.getElementById("log").innerHTML = sessionStorage.length;
+            }
+            document.getElementById("btn3").onclick = function(){
+                sessionStorage.clear();
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Hello : <span id="log"></span></h1>
+    <button id="btn">Get User Data</button>
+    <button id="btn1">Change User Data</button>
+    <button id="btn2">Get Storage Length</button>
+    <button id="btn3">Clear Storage Data</button>
+</body>
+</html

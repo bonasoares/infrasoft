@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border : 1px solid grey;
+        }
+    </style>
+    <script>
+        var ctx,xbox,ybox,dbox;
+        document.addEventListener("DOMContentLoaded", init);
+        function init(){
+            ctx = document.querySelector("#can").getContext("2d");
+        };
+        setInterval(function(){
+            xbox = Math.round(Math.random()*500);
+            ybox = Math.round(Math.random()*500);
+            dbox = Math.round(Math.random()*50);
+
+            let r = Math.round(Math.random()*255);
+            let g = Math.round(Math.random()*255);
+            let b = Math.round(Math.random()*255);
+
+           // ctx.clearRect(0,0,500,500);
+            ctx.fillStyle = "rgb("+r+","+g+","+b+")";
+            ctx.fillRect(xbox,ybox,dbox,dbox);
+
+        }, 1)
+    </script>
+</head>
+<body>
+    <canvas id="can" width="500" height="500"></canvas>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+    "heroes" : [
+        {
+            "title" : "Batman",
+            "firstname" : "Bruce",
+            "lastname" : "Wayne",
+            "city" : "Gotham",
+            "power": 7 
+        },
+        {
+            "title" : "Superman",
+            "firstname" : "Clark",
+            "lastname" : "Kent",
+            "city" : "Metropolis",
+            "power": 8 
+        },
+        {
+            "title" : "Spiderman",
+            "firstname" : "Peter",
+            "lastname" : "Parker",
+            "city" : "New York",
+            "power": 6 
+        }
+    ]
+}
