@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        function composition(fun1, fun2){
+            return function(num){
+                return fun1( fun2(num) )
+            }
+        };
+
+        function firstfunction(arg){
+            return arg * 2
+        };
+        function secondfunction(arg){
+            return arg + 2
+        };
+
+        let preResult = composition( firstfunction, secondfunction );// function
+
+        console.log( preResult(5) )// 14
+        */
+
+        function addPower(pow){
+            return function(person){
+                return {
+                    title : person.title,
+                    power : pow
+                }
+            }
+        };
+
+        let commonman = {
+            title : "Antman"
+        };
+
+/*
+        let heroInMaking = addPower(7);
+        commonman = heroInMaking(commonman);
+
+        console.log(commonman);// 
+*/
+        commonman = addPower(6)(commonman);
+        console.log(commonman);// 
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
