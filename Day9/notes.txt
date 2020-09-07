@@ -1,0 +1,29 @@
+PRE REQUISITE
+------------
+npm i @angular/cli @ionic/cli native-run cordova-res -g
+
+TO CREATE AN APPLICATION
+------------------------
+ionic start 
+
+--capacitor
+
+TO BUILD AND DEPLOY
+-------------------
+ionic build
+ionic capacitor add android
+npx capacitor open android 
+
+IF YOU MAKE CHANGES TO YOUR APPLICATION
+---------------------------------------
+ionic capacitor copy
+
+
+IF ADD PLUG-IN TO YOUR APPLICATION
+----------------------------------
+ionic capacitor sync
+
+
+TO BUILD AND DEPLOY
+-------------------
+npx capacitor open android 

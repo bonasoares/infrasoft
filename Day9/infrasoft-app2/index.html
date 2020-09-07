@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+</head>
+<body>
+    <ion-app>
+
+        <ion-header>
+            <ion-toolbar>
+              <ion-buttons slot="start">
+                <ion-back-button></ion-back-button>
+              </ion-buttons>
+              <ion-title>My Hero Application Navigation Bar</ion-title>
+            </ion-toolbar>
+        </ion-header>
+
+        <ion-content  fullscreen="true">
+            <ion-card *ngFor="let hero of heroes">
+                <ion-card-header>
+                    <ion-card-subtitle>Sub Title</ion-card-subtitle>
+                    <ion-card-title> Card Title </ion-card-title>
+                </ion-card-header>
+ 
+             <ion-item>
+               <ion-label> Name </ion-label>
+             </ion-item>
+   
+               <ion-card-content>
+               <ion-label> hero.appearance.race </ion-label>
+                  hero.work.occupation 
+             </ion-card-content>
+           </ion-card>
+        </ion-content>
+
+        <ion-footer>
+            <ion-toolbar>
+                <ion-title>Footer</ion-title>
+            </ion-toolbar>
+        </ion-footer>
+    </ion-app>
+</body>
+</html>
