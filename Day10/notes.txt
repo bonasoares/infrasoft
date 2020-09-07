@@ -1,0 +1,115 @@
+ionic start splashapp blank --corodva
+
+we then replaced 
+icon.png with icon.jpg and 
+splash.png with splash.jpg in resources directory
+
+ionic cordova resources
+    this command did generate custom splash and icons for us
+
+ionic cordova platform add android
+    this command adds android platform to our app
+
+
+ionic corodva build android
+
+ionic cordova run android
+
+ionic cordova emulate android
+
+
+-------------------
+
+    ionic cordova platform add browser
+    this command adds browser platform to our app
+
+
+-------------------
+
+cordova create step1 com.infrasoft.SplashPlug SplashPlug
+
+cd step1
+
+cordova platform add android
+
+cordova plugin add cordova-plugin-splashscreen
+
+copy the resources folder from previous project to the root folder
+
+cordova res
+
+cordova prepare
+
+cordova build android
+
+cordova emulate android
+
+-------------------
+
+cordova create step2 com.infrasoft.BatteryApp BatteryApp
+
+cd step2
+
+cordova platform add android
+cordova platform add browser
+
+cordova plugin add cordova-plugin-battery-status
+
+cordova prepare
+
+cordova build android
+
+cordova emulate android
+
+------------------
+
+cordova create step3 com.infrasoft.DevicePlug DevicePlug
+
+cd step3
+
+cordova platform add android
+
+cordova plugin add cordova-plugin-device
+
+cordova prepare
+
+cordova build android
+
+cordova emulate android
+
+------------------
+
+cordova create step4 com.infrasoft.CameraApp CameraApp
+
+cd step4
+
+cordova platform add android
+
+cordova plugin add cordova-plugin-camera
+
+cordova prepare
+
+cordova build android
+
+cordova emulate android
+
+-------------------------------
+
+npm i plugman -g
+
+create a folder for plugin 
+
+plugman create --name InfraSoftPlugin --plugin_id com.infrasoft.vijay --plugin_version 1.0.0
+
+plugman platform add --platform_name android
+
+plugman createpackagejson ./
+	since the we are in the directory of the plugin
+
+--------------------------------
+
+if you make any changes to plugin then uninstall and re-install it again using
+
+cordova plugin rm com.infrasoft.vijay
+
+cordova plugin add ../infrasoft/InfrasoftPlugin InfrasoftPlugin 
